@@ -95,8 +95,7 @@ public class DrawDemo
         Pen pen = new Pen(x, y, myCanvas);
         pen.setColor(Color.GREEN);
         
-        for(int j=0; j<3 ; j++)
-        {
+        for(int j=0; j<3 ; j++){
             pen.move(100);
             pen.turn(-120);
         }
@@ -110,10 +109,24 @@ public class DrawDemo
         Pen pen = new Pen(180, 200, myCanvas);
         pen.setColor(Color.GREEN);
         
-        for(int i=0; i<5; i++)
-        {
+        for(int i=0; i<5; i++){
             pen.move(80);
             pen.turn(-72);
+        }
+    }
+    
+    /**
+     * Este metodo permite dibujar un poligono regular 
+     * con n lados, pasado por parametro.
+     */
+    public void drawPolygon(int n)
+    {
+        Pen pen = new Pen(180, 200, myCanvas);
+        pen.setColor(Color.GREEN);
+        
+        for(int i=0; i<n; i++){
+            pen.move(60);
+            pen.turn(-360/n);
         }
     }
 }
