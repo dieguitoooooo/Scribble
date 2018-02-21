@@ -73,11 +73,11 @@ public class DrawDemo
             int green = random.nextInt(256);
             int blue = random.nextInt(256);
             pen.setColor(new Color(red, green, blue));
-            
+
             pen.randomSquiggle();
         }
     }
-    
+
     /**
      * Clear the screen.
      */
@@ -85,7 +85,7 @@ public class DrawDemo
     {
         myCanvas.erase();
     }
-    
+
     /**
      * Metodo que permite dibujar un triangulo verde en las coordemadas pasadas
      * por parametro.
@@ -94,13 +94,13 @@ public class DrawDemo
     {
         Pen pen = new Pen(x, y, myCanvas);
         pen.setColor(Color.GREEN);
-        
+
         for(int j=0; j<3 ; j++){
             pen.move(100);
             pen.turn(-120);
         }
     }
-    
+
     /**
      * Este metodo permite dibujar un pentagono verde
      */
@@ -108,13 +108,13 @@ public class DrawDemo
     {
         Pen pen = new Pen(180, 200, myCanvas);
         pen.setColor(Color.GREEN);
-        
+
         for(int i=0; i<5; i++){
             pen.move(80);
             pen.turn(-72);
         }
     }
-    
+
     /**
      * Este metodo permite dibujar un poligono regular 
      * con n lados, pasado por parametro.
@@ -123,10 +123,24 @@ public class DrawDemo
     {
         Pen pen = new Pen(180, 200, myCanvas);
         pen.setColor(Color.GREEN);
-        
+
         for(int i=0; i<n; i++){
             pen.move(60);
             pen.turn(-360/n);
+        }
+    }
+
+    /**
+     * Metodo espiral
+     */
+    public void drawSpiral()
+    {
+        Pen pen = new Pen(250, 200, myCanvas);
+        pen.setColor(Color.BLACK);
+
+        for (int i = 2; i < 62; i++) {
+            pen.move(i*4); 
+            pen.turn(90);
         }
     }
 }
