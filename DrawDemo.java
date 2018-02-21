@@ -85,4 +85,20 @@ public class DrawDemo
     {
         myCanvas.erase();
     }
+    
+    /**
+     * Metodo que permite dibujar un triangulo verde en las coordemadas pasadas
+     * por parametro.
+     */
+    public void drawTriangle(int x, int y)
+    {
+        Pen pen = new Pen(x, y, myCanvas);
+        pen.setColor(Color.GREEN);
+        
+        for(int j=0; j<3 ; j++)
+        {
+            pen.move(100);
+            pen.turn(-120);
+        }
+    }
 }

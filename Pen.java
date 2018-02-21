@@ -14,7 +14,7 @@ public class Pen
     // constants for randomSquiggle method
     private static final int SQIGGLE_SIZE = 40;
     private static final int SQIGGLE_COUNT = 30;
-    
+
     private int xPosition;
     private int yPosition;
     private int rotation;
@@ -64,7 +64,7 @@ public class Pen
         double angle = Math.toRadians(rotation);
         int newX = (int) Math.round(xPosition + Math.cos(angle) * distance);
         int newY = (int) Math.round(yPosition + Math.sin(angle) * distance);
-        
+
         moveTo(newX, newY);
     }
 
@@ -144,5 +144,4 @@ public class Pen
         }
 
     }
-
 }
